@@ -61,7 +61,7 @@ function presentData(emps) {
   <td>$${emps[i].payRate}</td>
   <td> $${emps[i].pay()}</td></tr>`;
   }
-
+  
   htmlStr += `<tr><td colspan=4>Total payroll: $${sum}</td></tr></table>`;
   document.getElementById("section1").innerHTML = htmlStr;
 }
