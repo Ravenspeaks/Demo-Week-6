@@ -29,7 +29,7 @@ emp1.pay = function () {
   return this.hours * this.payRate;
 };
 
-htmlStr = `<p>Name: ${emp1.name}<br>Hours: ${emp1.hours}</br>
+htmlStr = `<p>Name: ${emp1.name}<br>Hours worked: ${emp1.hours}</br>
 Pay rate: ${emp1.payRate}</br>
 Pay amount: ${emp1.pay()}</p>`;
 document.getElementById("section2").innerHTML += htmlStr;

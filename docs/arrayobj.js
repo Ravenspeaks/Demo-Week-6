@@ -65,3 +65,5 @@ function presentData(emps) {
   htmlStr += `<tr><td colspan=4>Total payroll: $${sum}</td></tr></table>`;
   document.getElementById("section1").innerHTML = htmlStr;
 }
+
+
