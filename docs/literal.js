@@ -15,8 +15,21 @@ let emp = {
   }
 };
 
-let htmlStr = `<h3>Done with object literal notation</h3><p>empName: ${emp.name}<br> Hours worked: ${
-  emp.hours
-}<br> pay rate: ${emp.payRate}<br>
+
+let htmlStr = `<h3>Done with object literal notation</h3><p>empName: ${emp.name}<br> Hours worked: ${emp.hours
+  }<br> pay rate: ${emp.payRate}<br>
 Pay amount: ${emp.pay()}</p>`;
 document.getElementById("section1").innerHTML = htmlStr;
+
+let emp1 = new Object();
+emp1.name = "Rob";
+emp1.hours = 25;
+emp1.payRate = 20;
+emp1.pay = function () {
+  return this.hours * this.payRate;
+};
+
+htmlStr = `<p>Name: ${emp1.name}<br>Hours: ${emp1.hours}</br>
+Pay rate: ${emp1.payRate}</br>
+Pay amount: ${emp1.pay()}</p>`;
+document.getElementById("section2").innerHTML += htmlStr;
