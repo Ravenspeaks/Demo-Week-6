@@ -45,3 +45,11 @@ for (const [key, value] of Object.entries(emp)) {
   console.log(`${key}: ${value}`);
 }
 */
+
+let emp1 = new Payroll("Tony", 20);
+let htmlStr2 = `<h3>Done with JS Class</h3><p>Name: ${emp1.name}<br>Hours: ${
+  emp1.hours
+}<br>Pay rate: ${emp1.payRate}<br>
+Pay amount: ${emp1.pay()}</p>`;
+// htmlStr += emp1.info();
+document.getElementById("section2").innerHTML = htmlStr2;
