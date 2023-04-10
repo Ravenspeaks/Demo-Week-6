@@ -61,9 +61,32 @@ function presentData(emps) {
   <td>$${emps[i].payRate}</td>
   <td> $${emps[i].pay()}</td></tr>`;
   }
-  
+
   htmlStr += `<tr><td colspan=4>Total payroll: $${sum}</td></tr></table>`;
   document.getElementById("section1").innerHTML = htmlStr;
 }
 
+//My practice 
 
+// create two new employees using the Payroll class and add them to the emps array
+emps.push(new Payroll("Emily", 40, 25));
+emps.push(new Payroll("John", 20, 18));
+
+// call the presentData function, passing the updated emps array as an argument
+presentData(emps, "section2");
+
+function presentData(emps,) {
+  let sum = 0;
+  let htmlStr = "<h3>Employee Payroll</h3>";
+  htmlStr +=
+    "<table><tr><th>Name</th><th>Hours</th><th>Pay Rate</th><th>Pay Amount</th><tr>";
+  for (let i = 0; i < emps.length; i++) {
+    sum += emps[i].pay();
+    htmlStr += `<tr><td>${emps[i].name}</td><td>${emps[i].hours}</td>
+  <td>$${emps[i].payRate}</td>
+  <td> $${emps[i].pay()}</td></tr>`;
+  }
+
+  htmlStr += `<tr><td colspan=4>Total payroll: $${sum}</td></tr></table>`;
+  document.getElementById("section2").innerHTML = htmlStr;
+}
