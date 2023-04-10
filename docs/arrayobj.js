@@ -65,7 +65,7 @@ function presentData(emps) {
   htmlStr += `<tr><td colspan=4>Total payroll: $${sum}</td></tr></table>`;
   document.getElementById("section1").innerHTML = htmlStr;
 }
-
+/*
 //My practice 
 
 // create two new employees using the Payroll class and add them to the emps array
@@ -89,4 +89,4 @@ function presentData(emps,) {
 
   htmlStr += `<tr><td colspan=4>Total payroll: $${sum}</td></tr></table>`;
   document.getElementById("section2").innerHTML = htmlStr;
-}
+}*/
